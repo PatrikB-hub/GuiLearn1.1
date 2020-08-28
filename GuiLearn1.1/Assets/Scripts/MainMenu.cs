@@ -19,16 +19,12 @@ public class MainMenu : MonoBehaviour
     public Slider SFXSlider;
     #endregion
 
-    public void Awake()
-    {
-        LoadPlayerPrefs();
-    }
 
     public void Start()
     {
-        //Debug.Log("game is running");
+        LoadPlayerPrefs();
 
-        if(!PlayerPrefs.HasKey("fullscreen"))
+        if (!PlayerPrefs.HasKey("fullscreen"))
         {
             PlayerPrefs.SetInt("fullscreen", 0);
             Screen.fullScreen = false;
@@ -94,7 +90,6 @@ public class MainMenu : MonoBehaviour
         mixer.SetFloat("SFXVol", value);
     }
 
-
     #region Save and load player prefs
 
     public void SavePlayerPrefs()
@@ -131,7 +126,15 @@ public class MainMenu : MonoBehaviour
     public void LoadPlayerPrefs()
     {
         //load quality
-        qualityDropdown.value = PlayerPrefs.GetInt("quality");
+        if (PlayerPrefs.HasKey("quality"))
+        {
+            int quality = PlayerPrefs.GetInt("quality");
+            qualityDropdown.value = quality;
+            if (QualitySettings.GetQualityLevel() != quality)
+            {
+                ChangeQuality(quality);
+            }            
+        }
 
         //load fullscreen
         if(PlayerPrefs.GetInt("fullscreen") == 0)
@@ -146,13 +149,19 @@ public class MainMenu : MonoBehaviour
         }
 
         //load audio sliders
-        float musicVol = PlayerPrefs.GetFloat("MusicVol");
-        musicSlider.value = musicVol;
-        mixer.SetFloat("MusicVol", musicVol);
+        if (PlayerPrefs.HasKey("MusicVol"))
+        {
+            float musicVol = PlayerPrefs.GetFloat("MusicVol");
+            musicSlider.value = musicVol;
+            mixer.SetFloat("MusicVol", musicVol);
+        }
 
-        float SFXVol = PlayerPrefs.GetFloat("SFXVol");
-        SFXSlider.value = SFXVol;
-        mixer.SetFloat("SFXVol", SFXVol);
+        if (PlayerPrefs.HasKey("SFXVol"))
+        {
+            float SFXVol = PlayerPrefs.GetFloat("SFXVol");
+            SFXSlider.value = SFXVol;
+            mixer.SetFloat("SFXVol", SFXVol);
+        }
     }
     #endregion
     public void OnGUI()
