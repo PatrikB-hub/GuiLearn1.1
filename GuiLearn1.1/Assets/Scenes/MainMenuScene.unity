@@ -4142,8 +4142,8 @@ MonoBehaviour:
   qualityDropdown: {fileID: 1163986818}
   fullscreenToggle: {fileID: 1373913979}
   mixer: {fileID: 24100000, guid: ace193763eaae764482169a65dab09b1, type: 2}
-  musicSlider: {fileID: 0}
-  SFXSlider: {fileID: 0}
+  musicSlider: {fileID: 1540394447}
+  SFXSlider: {fileID: 1420172043}
 --- !u!4 &1642598972
 Transform:
   m_ObjectHideFlags: 0
