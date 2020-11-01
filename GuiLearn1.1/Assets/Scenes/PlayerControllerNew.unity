@@ -376,6 +376,120 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233081541}
   m_CullTransparentMesh: 0
+--- !u!1 &233540507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 233540509}
+  - component: {fileID: 233540508}
+  m_Layer: 0
+  m_Name: Inventory test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &233540508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233540507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27a9c74bffe71b4aa96e6e90a8ed6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory:
+  - name: apple
+    description: blahh
+    value: 5
+    amount: 4
+    icon: {fileID: 2800000, guid: c0fa1df0325248141b8c5b0268997d90, type: 3}
+    mesh: {fileID: 0}
+    type: 0
+    damage: 0
+    armour: 0
+    heal: 10
+  - name: armour
+    description: hhhh
+    value: 7
+    amount: 5
+    icon: {fileID: 2800000, guid: 400425669a23ba947a4e9a7d10ce98d8, type: 3}
+    mesh: {fileID: 0}
+    type: 2
+    damage: 0
+    armour: 5
+    heal: 0
+  - name: gem
+    description: ghfkdenm
+    value: 5
+    amount: 5
+    icon: {fileID: 2800000, guid: 94a71e1b8f4bcf441a30813dc6abc496, type: 3}
+    mesh: {fileID: 0}
+    type: 3
+    damage: 0
+    armour: 0
+    heal: 0
+  - name: Axe
+    description: weapon
+    value: 4
+    amount: 6
+    icon: {fileID: 2800000, guid: 17d56da752e746e47a83f81374a900cc, type: 3}
+    mesh: {fileID: 1753333285639550630, guid: c18b82e2802ced1479ad0308e8c8e684, type: 3}
+    type: 1
+    damage: 10
+    armour: 0
+    heal: 0
+  - name: book
+    description: read
+    value: 3
+    amount: 4
+    icon: {fileID: 2800000, guid: 4b5a12c996351a849a81bd9614f3c3d0, type: 3}
+    mesh: {fileID: 0}
+    type: 6
+    damage: 0
+    armour: 0
+    heal: 0
+  - name: Cube weapon
+    description: weapon
+    value: 4
+    amount: 5
+    icon: {fileID: 2800000, guid: 666213e81e2ff794b9e687bdfacb41b4, type: 3}
+    mesh: {fileID: 6722045100000797784, guid: 6abe538bdfef0374b99279d004adce9c, type: 3}
+    type: 1
+    damage: 9
+    armour: 0
+    heal: 0
+  player: {fileID: 434972059}
+  money: 100
+  showInventory: 0
+  equipmentSlots:
+  - slotName: head
+    equipLocation: {fileID: 1150586080}
+  - slotName: chest
+    equipLocation: {fileID: 1926194264}
+  - slotName: weapon
+    equipLocation: {fileID: 1641165357}
+--- !u!4 &233540509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233540507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1563.6407, y: -735.37054, z: 632.4056}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 434972056}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &244561872
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 990d3555d2fc04b45bcb1c25b5b58321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showOnGUI: 1
+  showOnGUI: 0
   player: {fileID: 434972059}
   TextureLocation: Character/
   playerProfessions:
@@ -486,6 +600,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &246120950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246120952}
+  - component: {fileID: 246120951}
+  m_Layer: 0
+  m_Name: Shop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &246120951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246120950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45963f7a282254e4bb3d0468cb21de50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopInventory:
+  - name: Cheese
+    description: delisiousee
+    value: 20
+    amount: 7
+    icon: {fileID: 2800000, guid: c0fa1df0325248141b8c5b0268997d90, type: 3}
+    mesh: {fileID: 0}
+    type: 0
+    damage: 0
+    armour: 0
+    heal: 45
+  - name: qwerty keyboard
+    description: dtghrygyh
+    value: 150
+    amount: 3
+    icon: {fileID: 2800000, guid: 632fca351bd617744b5d71151382cbfa, type: 3}
+    mesh: {fileID: 0}
+    type: 0
+    damage: 500
+    armour: 0
+    heal: 0
+  showShop: 1
+--- !u!4 &246120952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246120950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.4092045, y: -1.5655627, z: -5.6086335}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251151193
 GameObject:
@@ -684,6 +863,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 434972056}
     m_Modifications:
+    - target: {fileID: 563348668558005156, guid: f12b0373d5a25dc4f83219c67033928b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5454481082998770600, guid: f12b0373d5a25dc4f83219c67033928b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -722,7 +906,7 @@ PrefabInstance:
     - target: {fileID: 5454481082998770600, guid: f12b0373d5a25dc4f83219c67033928b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5454481082998770600, guid: f12b0373d5a25dc4f83219c67033928b,
         type: 3}
@@ -811,6 +995,7 @@ Transform:
   - {fileID: 251151197}
   - {fileID: 690213566}
   - {fileID: 346085567}
+  - {fileID: 233540509}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1745,7 +1930,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962742727}
-  m_LocalRotation: {x: 0.30075142, y: 0.013531197, z: -0.004267554, w: 0.95359707}
+  m_LocalRotation: {x: 0.30075142, y: 0.013531229, z: -0.004267564, w: 0.95359707}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2266,6 +2451,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1150586080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2604914451752685383, guid: f12b0373d5a25dc4f83219c67033928b,
+    type: 3}
+  m_PrefabInstance: {fileID: 346085565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1222676198
 GameObject:
   m_ObjectHideFlags: 3
@@ -2661,6 +2852,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50.000004, y: 149.99301, z: 0}
+--- !u!4 &1641165357 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8273071838718139244, guid: f12b0373d5a25dc4f83219c67033928b,
+    type: 3}
+  m_PrefabInstance: {fileID: 346085565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1785202858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2952,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1926194264 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7562450941039656513, guid: f12b0373d5a25dc4f83219c67033928b,
+    type: 3}
+  m_PrefabInstance: {fileID: 346085565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1947189759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,7 +3352,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108153008}
-  m_LocalRotation: {x: 0.30075145, y: 0.013531197, z: -0.004267554, w: 0.95359707}
+  m_LocalRotation: {x: 0.30075145, y: 0.01353123, z: -0.0042675645, w: 0.95359707}
   m_LocalPosition: {x: -0.08512078, y: 3.5219998, z: -2.9987922}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
