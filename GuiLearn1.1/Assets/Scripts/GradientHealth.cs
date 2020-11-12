@@ -9,13 +9,7 @@ public class GradientHealth : MonoBehaviour
     public float currentHealth;
     public float maxHealth;
     public Gradient gradient;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         SetHealth(currentHealth);

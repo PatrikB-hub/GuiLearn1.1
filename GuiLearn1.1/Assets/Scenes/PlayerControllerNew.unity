@@ -651,7 +651,7 @@ MonoBehaviour:
     damage: 500
     armour: 0
     heal: 0
-  showShop: 1
+  showShop: 0
 --- !u!4 &246120952
 Transform:
   m_ObjectHideFlags: 0
@@ -2858,6 +2858,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 346085565}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1722246187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1722246189}
+  - component: {fileID: 1722246188}
+  m_Layer: 0
+  m_Name: Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1722246188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722246187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8832e6993e72a50419c554e5aa07ef6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showDialogue: 0
+  currentLineIndex: 0
+  playerMovement: {fileID: 434972057}
+  scr: {x: 0, y: 0}
+  name: Greg
+  dialogueText:
+  - Hi my name is greg
+  - Or is it
+  - Yes it is
+  - Bruh
+  - Bye!
+--- !u!4 &1722246189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722246187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 548.11487, y: 1.9259377, z: 440.33746}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1785202858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2951,6 +3005,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1891783303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1891783306}
+  - component: {fileID: 1891783305}
+  - component: {fileID: 1891783304}
+  m_Layer: 0
+  m_Name: Pool Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1891783304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891783303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04147d49f63f35c4fa5f7d4986ab0874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1891783305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891783303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8eb6677e97c441469877c5338c56a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceSource: {fileID: 0}
+  spawnResource: []
+  pool: []
+  isSpawnedAsChild: 0
+--- !u!4 &1891783306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891783303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 548.11487, y: 1.9259377, z: 440.33746}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1926194264 stripped
 Transform:
