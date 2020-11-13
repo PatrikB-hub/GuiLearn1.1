@@ -10,6 +10,7 @@ public class Dialogue : MonoBehaviour
     public bool showDialogue;
     //index for the currnt line of dialogue
     public int currentLineIndex;
+
     public ThirdPersonMovement playerMovement;
 
 
@@ -17,13 +18,13 @@ public class Dialogue : MonoBehaviour
 
     [Header("NPC Name and Dialogue")]
     //name of the specific NPC talking
-    public string name;
+    public string npcName;
     //array for text of the dialogue
     public string[] dialogueText;
 
     #endregion
 
-    private void OnGUI()
+    protected virtual void OnGUI()
     {
         if (showDialogue)
         {
@@ -36,7 +37,7 @@ public class Dialogue : MonoBehaviour
             //and current dialogue line
             GUI.Box(new Rect(0, 6 * scr.y,
                              Screen.width, scr.y * 3),
-                             name + " : " + dialogueText[currentLineIndex]);
+                             npcName + " : " + dialogueText[currentLineIndex]);
 
             //if not at the end of the dialogue
             if (currentLineIndex < dialogueText.Length - 1)
@@ -50,22 +51,28 @@ public class Dialogue : MonoBehaviour
             }
             else
             {
-                if (GUI.Button(new Rect(15 * scr.x, 8.5f * scr.y,
-                                            scr.x, scr.y * 0.5f), "Bye"))
-                {
-                    showDialogue = false;
-                    currentLineIndex = 0;
-
-                    playerMovement.enabled = true;
-
-                    //Cursor.lockState = CursorLockMode.Locked;
-                    //Cursor.visible = false;
-
-                }
+                EndDialogue();
             }
 
 
         }
     }
+
+    protected virtual void EndDialogue()
+    {
+        if (GUI.Button(new Rect(15 * scr.x, 8.5f * scr.y,
+                                            scr.x, scr.y * 0.5f), "Bye"))
+        {
+            showDialogue = false;
+            currentLineIndex = 0;
+
+            playerMovement.enabled = true;
+
+            //Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.visible = false;
+
+        }
+    }
+
 
 }

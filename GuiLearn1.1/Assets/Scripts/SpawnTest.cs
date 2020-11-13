@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnTest : MonoBehaviour
 {
+    /*
     [SerializeField] PoolManager spherePool;
 
     private void Start()
@@ -43,7 +44,7 @@ public class SpawnTest : MonoBehaviour
         }
     }
 
-
+    */
 
 
 }

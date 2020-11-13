@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.33962262, g: 0.21226643, b: 0.11374155, a: 1}
+  m_Color: {r: 1, g: 0.637687, b: 0.36320752, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3150,17 +3150,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats:
-    speed: 6
-    sprintSpeed: 12
-    crouchSpeed: 3
-    jumpHeight: 1
-    level: 0
-    maxHealth: 100
-    currentMana: 100
-    maxMana: 100
-    currentStamina: 100
-    maxStamina: 100
+    stats:
+      speed: 6
+      sprintSpeed: 12
+      crouchSpeed: 3
+      jumpHeight: 1
+      level: 0
+      maxHealth: 100
+      regenHealth: 5
+      currentMana: 100
+      maxMana: 100
+      currentStamina: 100
+      regenStamina: 5
+      maxStamina: 100
+      baseStatPoints: 10
+      baseStats: []
     healthHearts: {fileID: 0}
+  regenCooldown: 5
+  disableStaminaRegenTime: 0
+  staminaRegenCooldown: 1
+  staminaDegen: 20
+  customisationTextureIndex: 
+  profession:
+    professionName: Profession
+    abilityName: ability
+    abilityDescription: Does an action
+    defaultStats: []
 --- !u!4 &1813317872
 Transform:
   m_ObjectHideFlags: 0

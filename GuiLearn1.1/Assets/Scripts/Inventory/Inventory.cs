@@ -34,6 +34,13 @@ public class Inventory : MonoBehaviour
     public Equipment[] equipmentSlots;
     #endregion
 
+    public Item FindItem(string itemName)
+    {
+        Item foundItem = inventory.Find(findItem => findItem.Name == itemName);
+
+        return foundItem;
+    }
+
     public void AddItem(Item item)
     {
         Item foundItem = inventory.Find(findItem => findItem.Name == item.Name);

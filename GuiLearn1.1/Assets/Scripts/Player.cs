@@ -11,6 +11,7 @@ using System;
 
 public class Player : MonoBehaviour
 {
+    public Inventory inventory;
     public PlayerStats playerStats;
     private bool disableRegen = false;
     private float disableRegenTime;
@@ -71,6 +72,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Interact();
+
         #region health regen
         if (!disableRegen)
         {
@@ -151,7 +154,34 @@ public class Player : MonoBehaviour
         playerStats.CurrentHealth += heal;
     }
 
+    void Interact()
+    {
+        if (Input.GetKeyDown(KeyCode.E))//keybinding code here
+        {
+            Ray ray;
+            RaycastHit hitInfo;
 
+            ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
+
+            int layerMask = LayerMask.NameToLayer("Interactable"); // get the layer ID
+            layerMask = 1 << layerMask; // actually turning it into a mask (uning bitwise operations)
+
+
+            if (Physics.Raycast(ray, out hitInfo, 10f, layerMask))
+            {
+                if (hitInfo.collider.TryGetComponent<NPC>(out NPC npc))
+                {
+                    npc.Interact();
+                }
+
+                if (hitInfo.collider.TryGetComponent<InWorldItem>(out InWorldItem worldItem))
+                {
+                    inventory.AddItem(worldItem.item);
+                    Destroy(hitInfo.collider.gameObject);
+                }
+            }
+        }
+    }
 
 
 }
